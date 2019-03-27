@@ -1,0 +1,31 @@
+Test Scenarios for City Name
+
+Scenario 1: Valid city1 search must display 5 days relevant weather forecast
+Given user has launched the browser
+And on WeatherForecast index page
+When searched for a valid city1 \"Glasgow"
+Then weather forecast should be displayed for current day along with 4 consecutive future dates with respect to City1
+
+Scenario 2: Valid city2 search must display 5 days relevant weather forecast
+Given user has launched the browser
+And on WeatherForecast index page
+When searched for a valid city2 \"Edinburgh"
+Then weather forecast should be displayed for current day along with 4 consecutive future dates with respect to City2
+
+Scenario 3: Invalid city search must display message
+Given user has launched the browser
+And on WeatherForecast index page
+When searched for a invalid city \"xyz"
+Then weather forecast must display the message \"Error retrieving the forecast"
+
+Scenario 4: Blank city search must display message
+Given user has launched the browser
+And on WeatherForecast index page
+When searched for a blank city \""
+Then weather forecast must display the message \"Error retrieving the forecast"
+
+Scenario 5: Multiple city search must display message
+Given user has launched the browser
+And on WeatherForecast index page
+When searched for a multiple cities separated by comma \"Glasgow,Edinburgh"
+Then weather forecast must display the message \"Error retrieving the forecast"

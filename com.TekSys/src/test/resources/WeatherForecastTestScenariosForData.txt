@@ -1,0 +1,34 @@
+Scenarios for data displayed
+
+Scenario 1: UI validation
+Given user has launched the browser
+And on WeatherForecast index page
+When searched for a valid city \"Edinburgh"
+Then weather forecast should display data in the below format
+	heading as "Five Day Weather Forecast for" <City>
+	Day Date column
+	Dominant icon display column
+	Rounded Maximum Minium temperature display column
+	Rounded Wind speed and its direction column
+	Rounded Aggregate rainfall column
+
+Scenario 2: UI validation on day expansion
+Given user has launched the browser
+And on WeatherForecast index page
+When searched for a valid city \"Edinburgh"
+And click any DayDate
+Then weather forecast should expand the display of data in the below format
+	heading as "Five Day Weather Forecast for" <City>
+	Day Date column
+	Dominant icon display column
+	Rounded Maximum Minium temperature display column
+	Rounded Wind speed and its direction column
+	Rounded Aggregate rainfall column
+
+Scenario 3: Selecting a day/date should display most dominant data for the entire day
+Given user has launched the browser
+And on WeatherForecast index page
+When searched for a valid city \"Edinburgh"
+And clicks on day/date
+Then weather forecast for the day should expand displaying 3 hourly forecast slots in 24 hour format
+And should display the most dominant/current data respectively for that day

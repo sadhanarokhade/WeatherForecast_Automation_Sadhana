@@ -1,0 +1,31 @@
+Test Scenarios for Day/Hourly forecast
+
+Scenario 1: Selecting a day/date should display 3 hourly forecast
+Given user has launched the browser
+And on WeatherForecast index page
+When searched for a valid city \"Edinburgh"
+And clicks on day/date
+Then weather forecast for the day should expand displaying 3 hourly forecast slots in 24 hour format
+
+Scenario 2: Selecting current day/date should display 3 hourly forecast from current time
+Given user has launched the browser
+And on WeatherForecast index page
+When searched for a valid city \"Edinburgh"
+And clicks on current day/date
+Then weather forecast for the day should expand displaying 3 hourly forecast slots in 24 hour format as 0100 to 2200 starting from current time for the remaining time
+
+Scenario 3: Selecting any future day/date should display 3 hourly forecast
+Given user has launched the browser
+And on WeatherForecast index page
+When searched for a valid city \"Edinburgh"
+And clicks on any future day/date
+Then weather forecast for that day should expand displaying 3 hourly forecast slots in 24 hour format starting from 0100 to 2200
+
+Scenario 4: Changing the selection of day/date should display 3 hourly forecast of only that day
+Given user has launched the browser
+And on WeatherForecast index page
+When searched for a valid city \"Edinburgh"
+And clicks on day/date
+And clicks on another day/date
+Then weather forecast for the second choice day should expand displaying 3 hourly forecast slots in 24 hour format
+And the hourly weather forecast for previous selection should collapse

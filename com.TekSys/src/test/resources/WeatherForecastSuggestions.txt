@@ -1,0 +1,7 @@
+Suggestions:
+
+1. Default weather forecast should display the clients place on launch page instead of Glasgow all the time.
+
+2. When the page is Refreshed on one city, the city must not default to Glasgow and should retain the last entered city by the user, and should only refresh the weather forecast.
+
+3. When the URL for a searched city is shared with another person for viewing,  the data defauts to Glasgow. It is good to have a link that retains the searched city info.
