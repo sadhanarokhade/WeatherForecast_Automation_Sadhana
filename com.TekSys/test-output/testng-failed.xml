@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="tekSys.TestScenariosForCity">
+        <methods>
+          <include name="TS002"/>
+          <include name="closeAllBrowsers"/>
+          <include name="TS004"/>
+          <include name="TS001"/>
+          <include name="TS003"/>
+          <include name="preConfig"/>
+          <include name="TS005"/>
+        </methods>
+      </class> <!-- tekSys.TestScenariosForCity -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
